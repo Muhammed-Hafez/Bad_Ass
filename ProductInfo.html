@@ -21,23 +21,13 @@
             />
           </a>
         </div>
-        <nav class="navbar">
-          <div class="nav-container">
-            <a href="index.html" class="logo">
-              <img src="Global Nutrition_Final_logo-01.png" alt="logo" />
-            </a>
-            <div class="nav-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">HOME</a></li>
+            <li><a href="about.html" class="nav-item">ABOUT</a></li>
+            <li><a href="products.html" class="nav-item">PRODUCTS</a></li>
+            <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+          </ul>
         </nav>
 
         <div class="menu-toggle">
@@ -304,6 +294,69 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+      // Basic JS for interactive elements - since the request is for HTML and CSS only,
+      // this is minimal to support the required interactions
+      document.addEventListener("DOMContentLoaded", function () {
+        // Quantity selector
+        const decreaseBtn = document.getElementById("decrease-quantity");
+        const increaseBtn = document.getElementById("increase-quantity");
+        const quantityInput = document.getElementById("quantity");
+
+        decreaseBtn.addEventListener("click", function () {
+          let value = parseInt(quantityInput.value);
+          if (value > 1) {
+            quantityInput.value = value - 1;
+          }
+        });
+
+        increaseBtn.addEventListener("click", function () {
+          let value = parseInt(quantityInput.value);
+          quantityInput.value = value + 1;
+        });
+
+        // Thumbnail gallery
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const featuredImage = document.getElementById("featured-image");
+
+        thumbnails.forEach((thumb) => {
+          thumb.addEventListener("click", function () {
+            // Remove active class from all thumbnails
+            thumbnails.forEach((t) => t.classList.remove("active"));
+            // Add active class to clicked thumbnail
+            this.classList.add("active");
+            // Update featured image
+            featuredImage.src = this.getAttribute("data-image");
+          });
+        });
+
+        // Tabs
+        const tabs = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // Remove active class from all tabs and contents
+            tabs.forEach((t) => t.classList.remove("active"));
+            tabContents.forEach((c) => c.classList.remove("active"));
+
+            // Add active class to clicked tab
+            this.classList.add("active");
+
+            // Show corresponding content
+            const tabId = this.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+          });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+        });
+      });
+    </script>
   </body>
 </html>
