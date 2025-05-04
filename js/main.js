@@ -1,84 +1,77 @@
 // Navigation Toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+navToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-// Cart functionality
-let cartCount = 0;
-const cartCountElement = document.querySelector('.cart-count');
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-function updateCartCount(count) {
-    cartCount = count;
-    cartCountElement.textContent = cartCount;
-}
-
-// Add to cart functionality
-addToCartButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        cartCount++;
-        updateCartCount(cartCount);
-        
-        // Animation feedback
-        button.textContent = 'Added!';
-        button.style.backgroundColor = '#28a745';
-        
-        setTimeout(() => {
-            button.textContent = 'Add to Cart';
-            button.style.backgroundColor = '';
-        }, 1000);
-    });
+// Initialize Swiper
+const heroSwiper = new Swiper(".hero-slider", {
+  loop: true,
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
-// Contact form handling
-function handleSubmit(event) {
-    event.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', formData);
-    
-    // Clear form and show success message
-    event.target.reset();
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    return false;
-}
-
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+const brandSlider = new Swiper(".brand-slider", {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".brand-next",
+    prevEl: ".brand-prev",
+  },
 });
 
-// Add animation on scroll
-function revealOnScroll() {
-    const elements = document.querySelectorAll('.product-card, .feature, .team-member');
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < window.innerHeight - elementVisible) {
-            element.classList.add('active');
-        }
-    });
+const featuredSwiper = new Swiper(".featured-slider", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// Scroll Animation
+function handleScrollAnimation() {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementVisible = 150;
+
+    if (elementTop < window.innerHeight - elementVisible) {
+      const delay = element.getAttribute("data-delay") || 0;
+      setTimeout(() => {
+        element.classList.add("active");
+      }, delay);
+    }
+  });
 }
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+window.addEventListener("scroll", handleScrollAnimation);
+window.addEventListener("load", handleScrollAnimation);

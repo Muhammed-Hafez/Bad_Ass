@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAD ASS WHEY | Premium Protein Supplement</title>
+    <link rel="stylesheet" href="css/product-info.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="Global Nutrition_Final_logo-02.png"
+              alt="Team Fitness Logo"
+            />
+          </a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">HOME</a></li>
+            <li><a href="about.html" class="nav-item">ABOUT</a></li>
+            <li><a href="products.html" class="nav-item">PRODUCTS</a></li>
+            <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-section">
+        <div class="container">
+          <div class="product-display">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img
+                  id="featured-image"
+                  src="images/bad-ass-bcaa-811-400-g.jpg"
+                  alt="BAD ASS WHEY Protein"
+                />
+              </div>
+              <div class="thumbnail-container">
+                <div
+                  class="thumbnail active"
+                  data-image="https://images.pexels.com/photos/5946081/pexels-photo-5946081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                >
+                  <img
+                    src="images/bad-ass-bcaa-811-400-g.jpg"
+                    alt="BAD ASS WHEY Thumbnail 1"
+                  />
+                </div>
+                <div
+                  class="thumbnail"
+                  data-image="https://images.pexels.com/photos/5946079/pexels-photo-5946079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                >
+                  <img
+                    src="images/bad-ass-bcaa-811-400-g.jpg"
+                    alt="BAD ASS WHEY Thumbnail 2"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <h1 class="product-title">BAD ASS WHEY</h1>
+              <div class="product-description">
+                <p>
+                  Premium whey protein isolate for maximum muscle recovery and
+                  growth. Contains 25g of protein per serving with minimal fat
+                  and carbs.
+                </p>
+              </div>
+
+              <div class="product-options">
+                <div class="option-group">
+                  <label for="flavor">Flavour</label>
+                  <div class="custom-select">
+                    <select id="flavor" name="flavor">
+                      <option value="chocolate">Chocolate</option>
+                      <option value="vanilla">Vanilla</option>
+                      <option value="strawberry">Strawberry</option>
+                      <option value="banana">Banana</option>
+                    </select>
+                    <div class="select-arrow">
+                      <i class="fas fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="option-group">
+                  <label for="quantity">Quantity</label>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus" id="decrease-quantity">
+                      −
+                    </button>
+                    <input type="text" id="quantity" value="1" readonly />
+                    <button class="quantity-btn plus" id="increase-quantity">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <a href="contact.html"
+                  ><button class="add-to-cart-btn">Where to buy</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-details">
+        <div class="container">
+          <div class="tabs">
+            <div class="tab active" data-tab="description">Description</div>
+            <div class="tab" data-tab="nutrition">Nutrition Facts</div>
+            <div class="tab" data-tab="reviews">Reviews</div>
+          </div>
+
+          <div class="tab-content active" id="description">
+            <h2>Premium Protein Formula</h2>
+            <p>
+              BAD ASS WHEY is our flagship protein powder, designed for serious
+              athletes and fitness enthusiasts. Each serving delivers 25g of
+              high-quality whey protein isolate to support muscle recovery and
+              growth.
+            </p>
+            <p>
+              Our unique formula is easily digestible, mixes instantly, and
+              tastes amazing. Whether you're building muscle, losing fat, or
+              maintaining your physique, BAD ASS WHEY is the perfect supplement
+              for your fitness goals.
+            </p>
+            <ul class="features-list">
+              <li>25g protein per serving</li>
+              <li>Low in carbs and fat</li>
+              <li>No artificial fillers</li>
+              <li>Delicious taste</li>
+              <li>Mixes instantly</li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="nutrition">
+            <h2>Nutrition Information</h2>
+            <div class="nutrition-table">
+              <div class="nutrition-row header">
+                <div class="nutrition-cell">Nutrient</div>
+                <div class="nutrition-cell">Per Serving (30g)</div>
+              </div>
+              <div class="nutrition-row">
+                <div class="nutrition-cell">Energy</div>
+                <div class="nutrition-cell">110 kcal</div>
+              </div>
+              <div class="nutrition-row">
+                <div class="nutrition-cell">Protein</div>
+                <div class="nutrition-cell">25g</div>
+              </div>
+              <div class="nutrition-row">
+                <div class="nutrition-cell">Carbohydrates</div>
+                <div class="nutrition-cell">2g</div>
+              </div>
+              <div class="nutrition-row">
+                <div class="nutrition-cell">Fat</div>
+                <div class="nutrition-cell">1g</div>
+              </div>
+              <div class="nutrition-row">
+                <div class="nutrition-cell">Sugar</div>
+                <div class="nutrition-cell">1g</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+              <div class="review-header">
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="review-title">Best protein I've ever used</div>
+              </div>
+              <div class="review-author">John D. - Verified Purchase</div>
+              <div class="review-content">
+                <p>
+                  I've tried many protein powders over the years, but BAD ASS
+                  WHEY is by far the best. Great taste, mixes easily, and I've
+                  seen great results.
+                </p>
+              </div>
+            </div>
+
+            <div class="review">
+              <div class="review-header">
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="review-title">Amazing taste and quality</div>
+              </div>
+              <div class="review-author">Sarah M. - Verified Purchase</div>
+              <div class="review-content">
+                <p>
+                  The chocolate flavor is absolutely delicious, and it mixes
+                  perfectly with no clumps. Will definitely purchase again!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="newsletter">
+      <div class="container">
+        <h2 class="newsletter-title">SIGN UP FOR NEWSLETTER</h2>
+        <p class="newsletter-description">
+          Stay up to date with recent news, advice and weekly offers
+        </p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Enter email" required />
+            <button type="submit" class="subscribe-btn">Join</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-heading">OUR STORE</h3>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">OUR LINKS</h3>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">NEWSLETTER</h3>
+            <p class="footer-text">
+              Join Team premium! Receive the latest information on our products!
+              Become the best version of yourself at the gym!
+            </p>
+            <form class="footer-form">
+              <div class="form-group">
+                <input type="email" placeholder="Enter email" />
+                <button type="submit">Join</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <h3 class="social-heading">CONTACT WITH US</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Basic JS for interactive elements - since the request is for HTML and CSS only,
+      // this is minimal to support the required interactions
+      document.addEventListener("DOMContentLoaded", function () {
+        // Quantity selector
+        const decreaseBtn = document.getElementById("decrease-quantity");
+        const increaseBtn = document.getElementById("increase-quantity");
+        const quantityInput = document.getElementById("quantity");
+
+        decreaseBtn.addEventListener("click", function () {
+          let value = parseInt(quantityInput.value);
+          if (value > 1) {
+            quantityInput.value = value - 1;
+          }
+        });
+
+        increaseBtn.addEventListener("click", function () {
+          let value = parseInt(quantityInput.value);
+          quantityInput.value = value + 1;
+        });
+
+        // Thumbnail gallery
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const featuredImage = document.getElementById("featured-image");
+
+        thumbnails.forEach((thumb) => {
+          thumb.addEventListener("click", function () {
+            // Remove active class from all thumbnails
+            thumbnails.forEach((t) => t.classList.remove("active"));
+            // Add active class to clicked thumbnail
+            this.classList.add("active");
+            // Update featured image
+            featuredImage.src = this.getAttribute("data-image");
+          });
+        });
+
+        // Tabs
+        const tabs = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // Remove active class from all tabs and contents
+            tabs.forEach((t) => t.classList.remove("active"));
+            tabContents.forEach((c) => c.classList.remove("active"));
+
+            // Add active class to clicked tab
+            this.classList.add("active");
+
+            // Show corresponding content
+            const tabId = this.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+          });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>

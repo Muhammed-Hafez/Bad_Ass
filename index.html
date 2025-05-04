@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Neutrition Supplements - Fuel Your Performance</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
+
   <body>
     <nav class="navbar">
       <div class="nav-container">
@@ -22,84 +34,173 @@
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="#" class="cart-icon"
-              >🛒 <span class="cart-count">0</span></a
-            >
-          </li>
         </ul>
       </div>
     </nav>
 
     <main>
       <section class="hero">
-        <div class="hero-content">
-          <h1>Fuel Your Performance</h1>
-          <p>Premium supplements for maximum results</p>
-          <a href="products.html" class="cta-button">Shop Now</a>
-        </div>
-      </section>
-
-      <section class="mission">
-        <div class="container">
-          <div class="Mission">
-            <h2>Our Mission</h2>
-            <p>
-              At GLOBAL NUTRITION Supplements, we're committed to providing the
-              highest quality sports nutrition products to help you achieve your
-              fitness goals. Every product is carefully formulated using premium
-              ingredients and backed by scientific research.
-            </p>
-            <br />
-            <div class="features">
-              <div class="feature">
-                <h3>Quality First</h3>
-                <p>Premium grade ingredients</p>
-              </div>
-              <br />
-              <div class="feature">
-                <h3>Science Backed</h3>
-                <p>Research proven formulas</p>
-              </div>
-              <br />
-              <div class="feature">
-                <h3>Results Driven</h3>
-                <p>Designed for performance</p>
-              </div>
+        <div class="swiper hero-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slide">
+              <img
+                src="images/HeroImg/webSitedesign-06.jpg"
+                alt="Hero Image 1"
+                class="slide-image"
+              />
+            </div>
+            <div class="swiper-slide hero-slide">
+              <img
+                src="images/HeroImg/webSitedesign-07.jpg"
+                alt="Hero Image 2"
+                class="slide-image"
+              />
+            </div>
+            <div class="swiper-slide hero-slide">
+              <img
+                src="images/HeroImg/webSitedesign-05.jpg"
+                alt="Hero Image 3"
+                class="slide-image"
+              />
             </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-      </section>
-      <section class="highlight-section" data-aos="zoom-in">
-        <h2>Your Strength Begins Here</h2>
-        <p>
-          Explore our top-selling products trusted by athletes and fitness
-          enthusiasts worldwide.
-        </p>
       </section>
 
-      <section class="products-preview">
-        <div class="product-preview" data-aos="flip-left">
-          <img src="images/HeroImg/GN_productsPosts_6.jpg" alt="Arginine" />
-          <h3>Arginine Mega Caps</h3>
-          <a href="products.html" class="cta-button">View More</a>
-        </div>
-        <div class="product-preview" data-aos="flip-left" data-aos-delay="100">
-          <img src="images/HeroImg/GN_productsPosts_2.jpg" alt="Creatine" />
-          <h3>Creatine Monohydrate</h3>
-          <a href="products.html" class="cta-button">View More</a>
-        </div>
-        <div class="product-preview" data-aos="flip-left" data-aos-delay="200">
-          <img
-            src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80"
-            alt="Whey"
-          />
-          <h3>Whey Protein</h3>
-          <a href="products.html" class="cta-button">View More</a>
+      <section class="background">
+        <section class="shopbygoal">
+          <h2>
+            SHOP BY GOAL <span><i class="fas fa-chevron-right"></i></span>
+          </h2>
+          <div class="goalImgs">
+            <div class="goalitem">
+              <div class="goalcard">
+                <img src="images/Products/products.png" alt="shopbygoal" />
+                <img
+                  src="images/Products/products2.png"
+                  alt="shopbygoal-hover"
+                />
+              </div>
+              <p class="title">BUILD YOUR BURN</p>
+            </div>
+            <div class="goalitem">
+              <div class="goalcard">
+                <img src="images/Products/products.png" alt="shopbygoal" />
+                <img
+                  src="images/Products/products2.png"
+                  alt="shopbygoal-hover"
+                />
+              </div>
+              <p class="title">BUILD YOUR PERFORMANCE</p>
+            </div>
+            <div class="goalitem">
+              <div class="goalcard">
+                <img src="images/Products/products.png" alt="shopbygoal" />
+                <img
+                  src="images/Products/products2.png"
+                  alt="shopbygoal-hover"
+                />
+              </div>
+              <p class="title">BUILD YOUR STREENGTH</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mission">
+          <div class="container">
+            <hr />
+            <div class="Mission">
+              <div class="visionInfo">
+                <h3>OUR VISION</h3>
+                <p>
+                  At GLOBAL NUTRITION Supplements, we're committed to providing
+                  the highest quality sports nutrition products to help you
+                  achieve your fitness goals.Every product is carefully
+                  formulated using premium ingredients and backed by scientific
+                  research.
+                </p>
+              </div>
+              <img src="images/HeroImg/vision.avif" alt="vision" />
+            </div>
+            <hr />
+          </div>
+        </section>
+        <div class="contanier">
+          <section class="brand-slider-section showcase">
+            <div class="brand-content">
+              <!-- الجزء اليسار -->
+              <div class="main-brand">
+                <h3 class="brand-title">BAD ASS BRAND</h3>
+                <img
+                  src="images/products/products4.png"
+                  alt="Main Product"
+                  class="main-brand-img"
+                />
+              </div>
+            </div>
+            <div class="swiper brand-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide brandslide">
+                  <img
+                    src="images/Products/webSitedesign-09.jpg"
+                    alt="Product 1"
+                  />
+                  <div class="brand-title">
+                    <p>
+                      BADASS WHEY<br />
+                      <span>550ML</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide brandslide">
+                  <img
+                    src="images/Products/webSitedesign-09.jpg"
+                    alt="Product 2"
+                  />
+                  <div class="brand-title">
+                    <p>
+                      BADASS WHEY<br />
+                      <span>550ML</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide brandslide">
+                  <img
+                    src="images/Products/webSitedesign-09.jpg"
+                    alt="Product 3"
+                  />
+                  <div class="brand-title">
+                    <p>
+                      BADASS WHEY<br />
+                      <span>550ML</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide brandslide">
+                  <img
+                    src="images/Products/webSitedesign-09.jpg"
+                    alt="Product 4"
+                  />
+                  <div class="brand-title">
+                    <p>
+                      BADASS WHEY<br />
+                      <span>550ML</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev brand-prev"></div>
+              <div class="swiper-button-next brand-next"></div>
+            </div>
+          </section>
         </div>
       </section>
     </main>
-
     <footer>
       <div class="container">
         <div class="footer-content">
