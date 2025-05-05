@@ -647,7 +647,7 @@ footer {
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0;
-    height: 100px;
+    height: 60px;
   }
 
   .nav-links li {
@@ -655,7 +655,7 @@ footer {
   }
 
   .logo img {
-    width: 80px;
+    width: 60px;
   }
 }
 
