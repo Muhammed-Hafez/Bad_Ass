@@ -29,6 +29,71 @@ body {
   overflow-x: hidden;
 }
 
+.image-hover-box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-hover-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* الشايد اللي بيظهر من تحت */
+.bottom-shade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* بيغطي نص الصورة من تحت */
+  background: linear-gradient(
+    to top,
+    #dfac4d7b,
+    transparent
+  ); /* من أصفر لشبه شفاف */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* علشان ما يأثرش على الـ hover */
+}
+
+.image-hover-box:hover .bottom-shade {
+  opacity: 1;
+}
+
+.header-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.header-image-container::before,
+.header-image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.header-image-container::before {
+  left: 0;
+  background: linear-gradient(to right, #dfac4d7b, transparent);
+}
+
+.header-image-container::after {
+  right: 0;
+  background: linear-gradient(to left, #dfac4d7b, transparent);
+}
+
+.header-image-container.hover-on-edge::before,
+.header-image-container.hover-on-edge::after {
+  opacity: 1;
+}
+
 .background {
   background-image: url(/images/HeroImg/webSitedesign-13.jpg);
   background-repeat: no-repeat;
@@ -40,6 +105,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 20px 20px;
+}
+
+.container-v {
+  padding-block: 20px;
 }
 
 /* Navigation */
@@ -159,18 +228,19 @@ body {
 
 /* shopbygoal */
 
+.shopbygoal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
 .shopbygoal h2 {
   text-align: center;
   color: #000;
-  text-decoration: underline;
-  text-decoration-color: #ffbb00;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-underline-offset: 10px;
+  margin-bottom: 1rem;
   font-style: italic;
-}
-
-.shopbygoal span {
-  color: #ffbb00;
 }
 
 .title {
@@ -178,7 +248,9 @@ body {
   font-size: 1rem;
   opacity: 1;
   position: relative;
-  z-index: 3; /* النص في أعلى الطبقات */
+  z-index: 3;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
 }
 
 .goalImgs {
@@ -189,6 +261,7 @@ body {
 }
 
 .goalitem {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -196,88 +269,95 @@ body {
   z-index: 2;
 }
 
+.goalitem:hover .title {
+  color: #ffbb00;
+}
+
+.goalcard {
+  display: flex;
+  justify-content: center;
+}
+
 .goalcard .img {
   margin-bottom: 0 !important;
-  width: 100%;
 }
 
 .goalcard img {
-  width: 100%;
+  width: 200px;
 }
 
-/* عند الهوفر */
-
-.title:hover {
-  border-bottom: 1px solid goldenrod;
+.card-img {
+  width: 200px;
+  height: 200px;
+  background-image: url("/images/Products/products.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
 }
 
-.goalcard img:nth-child(2) {
-  display: none;
-}
-.goalcard:hover img:nth-child(1) {
-  display: none;
-}
-.goalcard:hover img:nth-child(2) {
-  display: block;
-  border-bottom: 1px solid goldenrod;
+.card-img:hover {
+  background-image: url("/images/Products/products2.png");
 }
 
-.title:hover {
-  color: #ffbb00;
-  border-bottom: 1px solid #ffbb00;
+.shop-next {
+  margin-right: 1rem;
 }
 
-.Mission {
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
+.shop-prev {
+  margin-left: 1rem;
 }
 
 .Mission img {
   width: 100%;
-  height: 300px;
 }
 
 .Mission h3 {
-  text-decoration: underline;
-  text-decoration-color: #ffbb00;
   text-underline-offset: 5px;
-  margin-left: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.5rem;
 }
 
 .Mission p {
-  margin: 1rem;
-  width: 90%;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.Mission a {
+  color: #ffbb00;
+  text-decoration: none;
 }
 
 /* brandSection */
+
+.showcase {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
 
 .brand-contanier {
   margin: 0 auto;
 }
 
-.showcase {
-  display: flex;
-}
-
-.main-brand {
+.new-arraivals {
   text-align: center;
-}
-
-.main-brand-img {
-  max-width: 100%;
-  height: 300px;
+  font-size: 1rem;
 }
 
 .brand-slider-section {
   display: flex;
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 
 .brand-slider {
   margin-left: 20px;
-  width: 60%;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -300,16 +380,72 @@ body {
 }
 
 .brand-title {
-  margin-bottom: 5px;
+  margin: 5px;
 }
 
 .brandslide p {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .brandslide span {
   text-align: center;
   color: var(--primary-color);
+}
+
+.be-img {
+  position: relative;
+}
+
+.be-img img {
+  display: block;
+  height: auto;
+}
+
+.be-img .view-more {
+  position: absolute;
+  top: 70%;
+  right: 73%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+@media (max-width: 468px) {
+  .be-img .view-more {
+    font-size: 6px;
+    right: 72%;
+  }
+
+  .Mission {
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+.be-img .view-more:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.him-her {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.him-her img {
+  width: 100%;
 }
 
 /* About Page */
@@ -391,7 +527,6 @@ body {
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 1rem;
 }
 
 .team-member {
@@ -399,8 +534,9 @@ body {
 }
 
 .team-member img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  padding: 1rem;
   object-fit: cover;
 }
 
@@ -412,41 +548,54 @@ body {
 }
 
 .ourproducts-section {
-  display: flex;
+  text-align: center;
   margin-bottom: 1rem;
-}
-
-.ourproducts img {
-  width: 40%;
-  height: 250px;
-  margin-right: 0.8rem;
 }
 
 .products-info {
   padding: 0.5rem;
   width: 60%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .products-info h3 {
-  text-decoration: underline;
-  text-decoration-color: var(--primary-color);
-  text-underline-offset: 7px;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  margin-bottom: -0.6rem;
 }
 
 .products-info span {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+  color: #f1b205;
   letter-spacing: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
 }
 
 .products-info p {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-wrap: balance;
+  font-size: 0.7rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.filters select {
+  padding: 6px 10px;
+  font-size: 14px;
 }
 
 .products-section {
-  padding: 20px 0 60px;
+  padding: 20px 20px 60px;
 }
 
 .brand-section h2 {
@@ -458,7 +607,7 @@ body {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -493,13 +642,73 @@ body {
   font-size: 0.9rem;
 }
 
-.products-imgf {
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: auto;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.product-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.view-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.product-image-wrapper:hover::after,
+.product-image-wrapper:hover .view-details {
+  opacity: 1;
+}
+
+.products-imgf {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 1rem;
 }
 
 /* Contact Page */
 .contact-section {
   padding: 120px 0 60px;
+}
+
+.contact-section h1 {
+  text-align: center;
+}
+
+.contact-section p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact-content {
@@ -513,6 +722,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 10px;
+  text-align: center;
 }
 
 .info-item {
@@ -537,6 +747,7 @@ body {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
+  padding: 1rem;
 }
 
 .form-group input,
@@ -568,58 +779,6 @@ body {
   background-color: #cc0000;
 }
 
-/* Footer */
-footer {
-  background-color: #000;
-  padding: 3rem 0 1rem;
-  margin-top: 4rem;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-section h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-section a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.footer-section a:hover {
-  color: var(--primary-color);
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-links a {
-  color: var(--text-color);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-toggle {
@@ -647,7 +806,7 @@ footer {
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0;
-    height: 60px;
+    height: 80px;
   }
 
   .nav-links li {
@@ -698,7 +857,13 @@ footer {
 
   .Mission p {
     font-size: 0.9rem;
+    padding-inline: 1rem;
     width: 100%;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
   }
 
   .brand-slider-section {
@@ -760,9 +925,6 @@ footer {
     flex-direction: column;
   }
 
-  .ourproducts-section img {
-    width: 50%;
-  }
   .products-imgf {
     display: flex;
     flex-direction: row;

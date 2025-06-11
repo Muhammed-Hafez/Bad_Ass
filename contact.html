@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - GLOBAL NUTRITION Supplements</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-container">
         <a href="index.html" class="logo">
-          <img src="images/Global Nutrition_Final_logo-01.png" alt="logo" />
+          <img src="images/Global Nutrition_Final_logo-04.png" alt="logo" />
         </a>
         <div class="nav-toggle">
           <span></span>
@@ -49,10 +60,18 @@
                   States
                 </p>
               </div>
-              <div class="social-links">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
+              <div class="footer-social">
+                <div class="social-icons">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </div>
               </div>
             </div>
             <div class="contact-form">
@@ -89,35 +108,22 @@
       </section>
     </main>
 
-    <footer>
+    <section class="newsletter">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>GLOBAL NUTRITION Supplements</h3>
-            <p>Fuel your performance with premium quality supplements.</p>
+        <h2 class="newsletter-title">SIGN UP FOR NEWSLETTER</h2>
+        <p class="newsletter-description">
+          Stay up to date with recent news, advice and weekly offers
+        </p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Enter email" required />
+            <button type="submit" class="subscribe-btn">Join</button>
           </div>
-          <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Connect With Us</h3>
-            <div class="social-links">
-              <a href="#" class="social-link">Facebook</a>
-              <a href="#" class="social-link">Instagram</a>
-              <a href="#" class="social-link">Twitter</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 GLOBAL NUTRITION Supplements. All rights reserved.</p>
-        </div>
+        </form>
       </div>
+    </section>
+    <footer>
+      <div id="footer-placeholder"></div>
     </footer>
 
     <script src="js/main.js"></script>

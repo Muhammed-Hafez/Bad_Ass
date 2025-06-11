@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BAD ASS WHEY | Premium Protein Supplement</title>
     <link rel="stylesheet" href="css/product-info.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -16,7 +17,7 @@
         <div class="logo">
           <a href="index.html">
             <img
-              src="Global Nutrition_Final_logo-02.png"
+              src="images/Global Nutrition_Final_logo-04.png"
               alt="Team Fitness Logo"
             />
           </a>
@@ -82,38 +83,23 @@
 
               <div class="product-options">
                 <div class="option-group">
-                  <label for="flavor">Flavour</label>
+                  <div class="product-actions">
+                    <a href="contact.html"
+                      ><button class="add-to-cart-btn">Where To Buy</button></a
+                    >
+                  </div>
                   <div class="custom-select">
                     <select id="flavor" name="flavor">
-                      <option value="chocolate">Chocolate</option>
-                      <option value="vanilla">Vanilla</option>
-                      <option value="strawberry">Strawberry</option>
-                      <option value="banana">Banana</option>
+                      <option value="chocolate">Branch 1</option>
+                      <option value="vanilla">Branch 2</option>
+                      <option value="strawberry">Branch 3</option>
+                      <option value="banana">Branch 4</option>
                     </select>
                     <div class="select-arrow">
                       <i class="fas fa-chevron-down"></i>
                     </div>
                   </div>
                 </div>
-
-                <div class="option-group">
-                  <label for="quantity">Quantity</label>
-                  <div class="quantity-selector">
-                    <button class="quantity-btn minus" id="decrease-quantity">
-                      −
-                    </button>
-                    <input type="text" id="quantity" value="1" readonly />
-                    <button class="quantity-btn plus" id="increase-quantity">
-                      +
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="product-actions">
-                <a href="contact.html"
-                  ><button class="add-to-cart-btn">Where to buy</button></a
-                >
               </div>
             </div>
           </div>
@@ -244,57 +230,15 @@
     </section>
 
     <footer>
-      <div class="container">
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h3 class="footer-heading">OUR STORE</h3>
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-heading">OUR LINKS</h3>
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-heading">NEWSLETTER</h3>
-            <p class="footer-text">
-              Join Team premium! Receive the latest information on our products!
-              Become the best version of yourself at the gym!
-            </p>
-            <form class="footer-form">
-              <div class="form-group">
-                <input type="email" placeholder="Enter email" />
-                <button type="submit">Join</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="footer-social">
-          <h3 class="social-heading">CONTACT WITH US</h3>
-          <div class="social-icons">
-            <a href="#" class="social-icon"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-      </div>
+      <div id="footer-placeholder"></div>
     </footer>
 
     <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
       // Basic JS for interactive elements - since the request is for HTML and CSS only,
       // this is minimal to support the required interactions
       document.addEventListener("DOMContentLoaded", function () {
@@ -302,18 +246,6 @@
         const decreaseBtn = document.getElementById("decrease-quantity");
         const increaseBtn = document.getElementById("increase-quantity");
         const quantityInput = document.getElementById("quantity");
-
-        decreaseBtn.addEventListener("click", function () {
-          let value = parseInt(quantityInput.value);
-          if (value > 1) {
-            quantityInput.value = value - 1;
-          }
-        });
-
-        increaseBtn.addEventListener("click", function () {
-          let value = parseInt(quantityInput.value);
-          quantityInput.value = value + 1;
-        });
 
         // Thumbnail gallery
         const thumbnails = document.querySelectorAll(".thumbnail");

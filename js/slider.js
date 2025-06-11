@@ -17,8 +17,15 @@ const heroSwiper = new Swiper(".hero-slider", {
 
 const brandSlider = new Swiper(".brand-slider", {
   loop: true,
-  slidesPerView: 2,
-  spaceBetween: 20,
+  spaceBetween: 10,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
   navigation: {
     nextEl: ".brand-next",
     prevEl: ".brand-prev",
@@ -44,5 +51,35 @@ const featuredSwiper = new Swiper(".featured-slider", {
     1024: {
       slidesPerView: 3,
     },
+  },
+});
+
+const swiper = new Swiper(".shopbygoal-swiper", {
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    prevEl: ".shop-prev",
+    nextEl: ".shop-next",
+  },
+  breakpoints: {
+    468: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+const teamSwiper = new Swiper(".team-slider", {
+  loop: true,
+  spaceBetween: 5,
+  slidesPerView: 4,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
 });
