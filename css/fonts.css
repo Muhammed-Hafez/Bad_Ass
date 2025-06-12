@@ -21,3 +21,9 @@ h5 {
 .logo img {
   width: 100px;
 }
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 65px;
+  }
+}

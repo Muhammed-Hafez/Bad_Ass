@@ -937,9 +937,10 @@ body {
   }
 
   .Mission p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-inline: 1rem;
     width: 100%;
+    padding-inline: 0.5rem;
   }
 
   .filters {
