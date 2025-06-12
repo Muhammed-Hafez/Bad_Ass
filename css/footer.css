@@ -51,18 +51,95 @@ ul {
   margin: 0 auto;
 }
 
-.form-group {
-  display: flex;
-  width: 100%;
-  position: relative;
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.form-group input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border: 1px solid black;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-  font-size: 0.95rem;
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+}
+
+.form-group-c {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-c label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group-c input,
+.form-group-c textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group-c input:focus,
+.form-group-c textarea:focus {
+  border-color: #ffc107; /* لون أصفر كده لو بتحب */
+  outline: none;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffc107; /* لون أصفر كده لو بتحب */
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e0aa00;
 }
 
 .form-group input:focus {
@@ -78,7 +155,7 @@ ul {
 }
 
 .subscribe-btn:hover {
-  background-color: #333;
+  background-color: var(--primary-dark);
 }
 
 /* Footer */

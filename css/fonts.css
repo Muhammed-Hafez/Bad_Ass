@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Sperintura";
+  src: url("/images/fonts/Sprintura\ Demo.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Sperintura", sans-serif;
+}
+
+.logo img {
+  width: 100px;
+}

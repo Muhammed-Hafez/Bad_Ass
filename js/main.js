@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const allImages = document.querySelectorAll("img:not(.header-image)");
+  const allImages = document.querySelectorAll(
+    "img:not(.header-image):not(.mobile-image"
+  );
 
   allImages.forEach((img) => {
     if (img.parentNode.classList.contains("image-hover-box")) return;

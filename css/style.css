@@ -47,12 +47,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%; /* بيغطي نص الصورة من تحت */
-  background: linear-gradient(
-    to top,
-    #dfac4d7b,
-    transparent
-  ); /* من أصفر لشبه شفاف */
+  height: 100%; /* بيغطي نص الصورة من تحت */
+  background: linear-gradient(to top, #dfac4d51); /* من أصفر لشبه شفاف */
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none; /* علشان ما يأثرش على الـ hover */
@@ -121,12 +117,21 @@ body {
 
 .nav-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  height: 100px;
+  height: 120px;
+}
+
+.nav-links {
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
 .nav-links li a {
@@ -155,7 +160,7 @@ body {
 }
 
 .logo img {
-  width: 80px;
+  width: 100px;
   margin-top: 0.7rem;
 }
 
@@ -220,10 +225,57 @@ body {
   transition: var(--transition);
 }
 
+.slide-caption {
+  position: absolute;
+  bottom: 12%;
+  left: 32%;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  text-align: center;
+}
+
+.slide-caption h1 {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  margin: 0 0 10px;
+}
+
+.slide-caption p {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: var(--primary-color);
+  letter-spacing: 4px;
+}
+
+.slide-caption2 {
+  position: absolute;
+  bottom: 12%;
+  left: 28%;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  text-align: center;
+}
+
+.slide-caption2 h1 {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  margin: 0 0 10px;
+}
+
+.slide-caption2 p {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: var(--primary-color);
+  letter-spacing: 4px;
+}
+
 /* shopbygoal */
 
 .shopbygoal {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px 20px;
 }
@@ -398,22 +450,26 @@ body {
 
 .be-img .view-more {
   position: absolute;
-  top: 70%;
-  right: 73%;
+  top: 66%;
+  right: 68%;
   background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 6px 12px;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 24px;
   transition: background 0.3s ease;
   z-index: 1000;
 }
 
 @media (max-width: 468px) {
   .be-img .view-more {
-    font-size: 6px;
-    right: 72%;
+    font-size: 12px;
+    right: 58%;
+  }
+
+  .nav-links {
+    left: 50%;
   }
 
   .Mission {
@@ -515,7 +571,7 @@ body {
 }
 
 .team-grid {
-  background-image: url(/images/HeroImg/webSitedesign-08.jpg);
+  background-image: url(/images/HeroImg/photo_Logos.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -651,7 +707,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
 .product-image-wrapper::after {
@@ -678,6 +734,10 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
+}
+
+.product-card:hover .product-image-wrapper img {
+  filter: blur(5px);
 }
 
 .product-image-wrapper:hover::after,
@@ -785,8 +845,7 @@ body {
     position: absolute;
     text-align: center;
     top: 100%;
-    left: 0;
-    background-color: #33160d62;
+    background-color: #33160dc2;
     flex-direction: column;
     padding: 1rem;
   }
@@ -810,26 +869,40 @@ body {
   .logo img {
     width: 60px;
   }
-}
 
-.hero-slider {
-  width: 100%;
-}
-
-.slide-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .hero-slider {
+  .hero-slide img {
+    width: 100%;
     height: 50vh;
-    overflow: hidden;
+    object-fit: cover;
+    object-position: center top;
   }
 
-  .slide-image {
-    height: 50vh;
+  .slide-caption {
+    left: 18%;
+  }
+
+  .slide-caption h1 {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+
+  .slide-caption p {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  .slide-caption2 {
+    left: 18%;
+  }
+
+  .slide-caption2 h1 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  .slide-caption2 p {
+    font-size: 1rem;
+    letter-spacing: 5px;
   }
 }
 
@@ -897,7 +970,7 @@ body {
   }
 
   .brandslide p {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     margin-top: 0.3rem;
   }
 
