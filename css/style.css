@@ -451,7 +451,7 @@ body {
 .be-img .view-more {
   position: absolute;
   top: 66%;
-  right: 68%;
+  right: 72%;
   background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 6px 12px;
@@ -459,13 +459,14 @@ body {
   border-radius: 4px;
   font-size: 24px;
   transition: background 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
   z-index: 1000;
 }
 
 @media (max-width: 468px) {
   .be-img .view-more {
     font-size: 12px;
-    right: 58%;
+    right: 64%;
   }
 
   .nav-links {
@@ -656,6 +657,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .product-card {
@@ -682,6 +684,7 @@ body {
   font-size: 1rem;
   text-align: center;
   color: #000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .product-card p {
@@ -844,7 +847,6 @@ body {
     top: 100%;
     background-color: #33160dc2;
     flex-direction: column;
-    padding: 1rem;
   }
 
   .nav-links.active {
@@ -860,7 +862,7 @@ body {
   }
 
   .nav-links li {
-    margin: 1rem 0;
+    margin: 0.2rem 0;
   }
 
   .logo img {

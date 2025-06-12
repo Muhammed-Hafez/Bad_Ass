@@ -40,7 +40,7 @@ ul {
 }
 
 .newsletter-description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
   opacity: 0.9;
   font-family: Arial, Helvetica, sans-serif;
@@ -70,6 +70,7 @@ ul {
 .form-group {
   margin-bottom: 1.2rem;
   display: flex;
+  padding: 0.5rem;
 }
 
 .form-group-c {
@@ -290,5 +291,9 @@ footer {
 
   .third {
     width: 100%;
+  }
+
+  .newsletter-title {
+    font-size: 1.5rem;
   }
 }
