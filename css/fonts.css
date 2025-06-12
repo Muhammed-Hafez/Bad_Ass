@@ -13,6 +13,11 @@ h5 {
   font-family: "Sperintura", sans-serif;
 }
 
+.nav-links li a {
+  font-family: "Sperintura", sans-serif;
+  letter-spacing: 2px;
+}
+
 .logo img {
   width: 100px;
 }
