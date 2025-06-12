@@ -645,13 +645,10 @@ body {
 }
 
 .products-section {
-  padding: 20px 20px 60px;
+  padding: 25px 25px 60px;
 }
 
 .brand-section h2 {
-  text-decoration: underline;
-  text-decoration-color: var(--primary-color);
-  text-underline-offset: 7px;
   margin-bottom: 0.5rem;
 }
 
@@ -754,7 +751,7 @@ body {
 
 /* Contact Page */
 .contact-section {
-  padding: 120px 0 60px;
+  padding: 60px 0 60px;
 }
 
 .contact-section h1 {
