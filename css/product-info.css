@@ -530,7 +530,7 @@ p {
 
 /* Navigation Styles */
 header {
-  background-color: var(--primary-color);
+  background-color: #4a2a20;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -539,7 +539,7 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 15px;
 }
@@ -565,8 +565,8 @@ nav {
 
 .nav-links {
   position: absolute;
-  left: 50%;
-  top: 40%;
+  left: 60%;
+  top: 35%;
   transform: translateX(-50%);
   display: flex;
   gap: 40px;
@@ -615,7 +615,7 @@ nav {
 
 .menu-toggle {
   display: none;
-  color: var(--light-text);
+  color: #fcb231;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -628,7 +628,7 @@ nav {
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: var(--primary-color);
+    background-color: #33160d7f;
     text-align: center;
     padding: 1rem 0;
     gap: 1rem;

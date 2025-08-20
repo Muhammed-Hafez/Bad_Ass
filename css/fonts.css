@@ -19,11 +19,11 @@ h5 {
 }
 
 .logo img {
-  width: 100px;
+  width: 180px;
 }
 
 @media (max-width: 480px) {
   .logo img {
-    width: 65px;
+    width: 150px;
   }
 }
